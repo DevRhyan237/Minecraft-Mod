@@ -1,7 +1,5 @@
 package net.mcreator.betterminecraft.block;
 
-/* imports omitted */
-
 public class PalmLogBlock extends Block implements SimpleWaterloggedBlock {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
