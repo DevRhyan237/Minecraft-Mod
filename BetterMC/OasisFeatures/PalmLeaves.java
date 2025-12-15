@@ -1,7 +1,5 @@
 package net.mcreator.betterminecraft.block;
 
-/* imports omitted */
-
 public class PalmLeavesBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
