@@ -1,0 +1,14 @@
+package net.mcreator.betterminecraft.item;
+
+public class GlowingMushroomSoupItem extends Item {
+	public GlowingMushroomSoupItem(Item.Properties properties) {
+		super(properties.food((new FoodProperties.Builder()).nutrition(4).saturationModifier(1.2f).build()).usingConvertsTo(Items.BOWL));
+	}
+
+	@Override
+	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
+		GlowingMushroomSoupPlayerFinishesUsingItemProcedure.execute(entity);
+		return retval;
+	}
+}
