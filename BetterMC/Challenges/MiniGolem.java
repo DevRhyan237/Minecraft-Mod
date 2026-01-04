@@ -1,5 +1,7 @@
 package net.mcreator.betterminecraft.entity;
 
+/* imports omitted */
+
 public class MiniGolemEntity extends Monster implements VibrationSystem {
 
 	public final AnimationState animationState0 = new AnimationState();
@@ -58,6 +60,20 @@ public class MiniGolemEntity extends Monster implements VibrationSystem {
 	@Override
 	public SoundEvent getDeathSound() {
 		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.iron_golem.repair"));
+	}
+
+	@Override
+	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		Entity sourceentity = damagesource.getEntity();
+		Entity immediatesourceentity = damagesource.getDirectEntity();
+
+		MiniGolemEntityIsHurtProcedure.execute(world, x, y, z, sourceentity);
+		return super.hurtServer(level, damagesource, amount);
 	}
 
 	@Override
