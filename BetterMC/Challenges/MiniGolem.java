@@ -37,7 +37,7 @@ public class MiniGolemEntity extends Monster implements VibrationSystem {
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(serverLevel, new ItemStack(Blocks.INFESTED_STONE_BRICKS));
+		this.spawnAtLocation(serverLevel, new ItemStack(Blocks.INFESTED_COBBLESTONE));
 	}
 
 	@Override
