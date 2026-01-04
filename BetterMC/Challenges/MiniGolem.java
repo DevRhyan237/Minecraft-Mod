@@ -1,7 +1,5 @@
 package net.mcreator.betterminecraft.entity;
 
-/* imports omitted */
-
 public class MiniGolemEntity extends Monster implements VibrationSystem {
 
 	public final AnimationState animationState0 = new AnimationState();
