@@ -4,7 +4,7 @@ public class YellowSeasonalLeavesBlock extends Block implements SimpleWaterlogge
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public YellowSeasonalLeavesBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.AZALEA_LEAVES).strength(1f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.AZALEA_LEAVES).strength(0.2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
