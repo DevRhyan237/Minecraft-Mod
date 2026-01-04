@@ -1,7 +1,5 @@
 package net.mcreator.betterminecraft.block;
 
-/* imports omitted */
-
 public class PalmLeavesBlock extends LeavesBlock implements EntityBlock {
 	public PalmLeavesBlock(BlockBehaviour.Properties properties) {
 		super(properties.sound(SoundType.AZALEA_LEAVES).strength(0.2f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).isSuffocating((bs, br, bp) -> false).isViewBlocking((bs, br, bp) -> false));
