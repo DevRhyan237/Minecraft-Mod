@@ -4,7 +4,7 @@ public class PalmLeavesBlock extends Block implements SimpleWaterloggedBlock, En
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public PalmLeavesBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.AZALEA_LEAVES).strength(0.2f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.AZALEA_LEAVES).strength(0.2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
