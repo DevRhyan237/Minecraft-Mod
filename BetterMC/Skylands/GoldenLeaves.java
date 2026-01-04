@@ -4,7 +4,7 @@ public class GoldentreeleavesBlock extends Block implements SimpleWaterloggedBlo
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public GoldentreeleavesBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.AZALEA_LEAVES).strength(1f, 2f).lightLevel(s -> 7).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BIT));
+		super(properties.sound(SoundType.AZALEA_LEAVES).strength(1f).lightLevel(s -> 7).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BIT));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
