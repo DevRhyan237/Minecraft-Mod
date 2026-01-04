@@ -4,7 +4,7 @@ public class SkyleavesBlock extends Block implements SimpleWaterloggedBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public SkyleavesBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.VINE).strength(1f, 2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.VINE).strength(0.2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
