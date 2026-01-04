@@ -4,7 +4,7 @@ public class OrangeSeasonalLeafBlock extends Block implements SimpleWaterloggedB
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public OrangeSeasonalLeafBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.AZALEA_LEAVES).strength(1f, 2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.AZALEA_LEAVES).strength(0.2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
