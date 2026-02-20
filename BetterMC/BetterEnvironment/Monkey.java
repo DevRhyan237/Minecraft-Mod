@@ -7,8 +7,6 @@ public class MonkeyEntity extends TamableAnimal implements RangedAttackMob {
 		xpReward = 0;
 		setNoAi(false);
 
-		setPersistenceRequired();
-
 	}
 
 	@Override
@@ -33,11 +31,6 @@ public class MonkeyEntity extends TamableAnimal implements RangedAttackMob {
 				return this.canUse();
 			}
 		});
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
