@@ -7,8 +7,6 @@ public class CrabEntity extends Animal {
 		xpReward = 0;
 		setNoAi(false);
 
-		setPersistenceRequired();
-
 	}
 
 	@Override
@@ -24,11 +22,6 @@ public class CrabEntity extends Animal {
 		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(8, new FloatGoal(this));
 
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
