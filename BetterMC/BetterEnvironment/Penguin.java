@@ -7,8 +7,6 @@ public class PenguinEntity extends Animal {
 		xpReward = 0;
 		setNoAi(false);
 
-		setPersistenceRequired();
-
 	}
 
 	@Override
@@ -32,11 +30,6 @@ public class PenguinEntity extends Animal {
 		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(9, new FloatGoal(this));
 
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
