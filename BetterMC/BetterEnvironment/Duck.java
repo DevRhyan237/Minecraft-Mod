@@ -7,8 +7,6 @@ public class DuckEntity extends Animal {
 		xpReward = 0;
 		setNoAi(false);
 
-		setPersistenceRequired();
-
 	}
 
 	@Override
@@ -23,11 +21,6 @@ public class DuckEntity extends Animal {
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
 
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
