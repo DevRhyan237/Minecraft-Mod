@@ -9,8 +9,6 @@ public class BirdEntity extends Animal {
 		xpReward = 0;
 		setNoAi(false);
 
-		setPersistenceRequired();
-
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 
 	}
@@ -41,11 +39,6 @@ public class BirdEntity extends Animal {
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
 
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
